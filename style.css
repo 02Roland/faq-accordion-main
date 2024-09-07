@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --LightPink: hsl(275, 100%, 97%);
+    --GrayishPurole: hsl(292, 16%, 49%);
+    --DarkPurple: hsl(292, 42%, 14%);
+    --weight1: 400;
+    --weight2: 600;
+    --weight3: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* color: white; */
+    height: 100vh;
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--LightPink);
+}
+#bg{
+    /* overflow: visible; */
+    /* position: absolute; */
+    height: 20%;
+    width: 100%;
+    background-image: url("assets/images/background-pattern-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: red; */
+    z-index: 1;
+}
+.container{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    z-index: 2;
+    bottom: 100px;
+    background-color: white;
+    padding: 20px;
+    filter: drop-shadow(0px 0px 5px var(--DarkPurple));
+    border-radius: 10px;
+}
+
+h4{
+    font-weight: var(--weight2);
+}
+#enfant1{
+    margin-top: 20px;
+}
+#enfant1, #enfant1 .enfant0{
+    display: flex;
+    flex-direction: column;
+}
+
+#enfant1 .enfant0{
+    margin-bottom: 20px;
+    /* background-color: red; */
+}
+
+.container p{
+    display: none;
+    line-height: 25px;
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: red; */
+    font-weight: var(--weight1);
+}
+h2{
+    display: flex;
+    margin-top: 10px;
+}
+h2::before{
+    content: "";
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-image: url("assets/images/icon-star.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+h4{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.enfant{
+    width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+}
+.minus{
+    display: none;
+}
+.enfant0:not(.enfant0:last-child){
+    border-bottom: 1px solid rgba(128, 128, 128, 0.384);
+    padding-bottom: 5px;
+}
+
+h4:hover{
+    cursor: pointer;
+    color: var(--GrayishPurole);
+}
+
+@media screen and (min-width: 900px) {
+    .container{
+        width: 40%;
+    }
+    #bg{
+        background-image: url("assets/images/background-pattern-desktop.svg");
+    }
+}
